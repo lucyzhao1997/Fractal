@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+body{
+    background-color: black;
+    
+}
+button{
+    font-family: Pacifico;
+    color:#323319;
+    background-color: #fdffc1;
+    box-shadow: 0 0 30px -3px rgb(236, 233, 199);
+    border: 0px; 
+    padding:10px;   
+    cursor: pointer;
+    bottom:40px;
+    left:45%;
+    position:absolute;
+    border-radius: .3em
+}
+button:hover{
+    background-color:#323319;
+    color:#fdffc1;
+}
+button:focus{
+    outline: none
+}
+
