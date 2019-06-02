@@ -1,6 +1,8 @@
 
-var canvas = document.getElementsByTagName("canvas")[0];
-var context = canvas.getContext("2d");
+var c = document.getElementsByTagName("canvas")[0];
+var context = c.getContext("2d");
+context.canvas.width = window.innerWidth;
+context.canvas.height = windows.innerHeight
 var colors = ["#ffffff","#f9d1f6","#d1ffff","#bbb5ff","#fdffb2"];
 var width = $(window).height();
 var height = $(window).width();
@@ -65,5 +67,16 @@ function drawBranch(n, x, y, s, angle){
         n_1 = 1;
         n_2 = n * 2 - 1;
     }
-    
+    context.translate(x,y);
+    context.rotate(-1 * ang * Math.PI / 180);
+    context.beginPath();
+    context.moveTo(0,0);
+    context.lineTo(
+        s * 2 * n_1 * (n_1 - 1),
+        s * 2 * n_1);
+    context.stroke();
+    ctx.closePath();
+    ctx.rotate(ang * Math.PI / 180);
+    ctx.translate(-1 * x_st, -1 * y_st);
+
 }
